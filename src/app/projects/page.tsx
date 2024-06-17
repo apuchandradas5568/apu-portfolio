@@ -8,7 +8,7 @@ interface Project {
   description: string;
   category: string;
   technologies: string;
-  previewLink: string;
+  previewLink?: string;
 }
 
 const ProjectPage: React.FC = () => {

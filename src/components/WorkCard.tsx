@@ -4,7 +4,7 @@ import React from "react";
 interface WorkCardProps {
   title: string;
   description: string;
-  link: string;
+  link?: string;
   tech: string;
 }
 
