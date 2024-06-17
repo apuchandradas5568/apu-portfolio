@@ -1,9 +1,13 @@
 import Card from "@/components/Card";
-import HomeBanner from "@/components/HomeBanner";
-import Navbar from "@/components/Navbar";
 import WorkCard from "@/components/WorkCard";
+import { allProjects } from "@/data";
 
 export default function Home() {
+
+  const recentWorks = allProjects.slice(0, 4);
+
+  
+
   return (
     <main>
       <div className="bio-section">
@@ -32,15 +36,22 @@ export default function Home() {
       </div>
 
       <div className="recent-work-section my-20">
-        <h1 className="text-3xl font-medium p-8">Recent Works</h1>
+        <h1 className="text-3xl font-medium text-center pb-8">Recent Works</h1>
 
-        <WorkCard
-          title="AltQuest: Product Review Application"
-          description="This is a full stack application which allows users to post query about a product they are looking for and get recommendations from other users."
-          tech= "React, Node, Express, MongoDB, Firebase, Tailwind CSS and JWT"
-          image="/altquest.png"
-        />
+
+        {recentWorks.map((project, idx) => (
+          <WorkCard
+            key={idx}
+            title={project.name}
+            description={project.description}
+            tech={project.technologies || ''}
+            link={project.previewLink}
+          />
+        ))}
+
+
       </div>
+
     </main>
   );
 }

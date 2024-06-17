@@ -13,18 +13,28 @@ const WorkCard: React.FC<WorkCardProps> = ({
   description,
   link,
   tech,
-}) =>  {
+}) => {
   return (
-    <div className=" mx-auto md:px-12 ">
-      <div className="flex border items-center m-2 justify-center gap-8 p-6 rounded-lg ">
+    <div className=" mx-auto  md:px-12 ">
+      <div className="flex border items-center m-2 bg-white justify-center gap-8 p-6 rounded-lg ">
         <div className="space-y-2">
           <h1 className="text-2xl font-medium ">{title}</h1>
           <p className="tracking-wide text-sm ">{description}</p>
-          <p className="text-sm tracking-wide font-medium "> Technologies: {tech}</p>
+          <p className="text-sm tracking-wide font-medium ">
+            {" "}
+            Technologies: {tech}
+          </p>
           <br />
-          <a href={link} target="_blank" className="text-blue-500 font-semibold ">
-            View Project
-          </a>
+
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              className="text-blue-500 font-semibold "
+            >
+              View Project
+            </a>
+          )}
         </div>
       </div>
     </div>

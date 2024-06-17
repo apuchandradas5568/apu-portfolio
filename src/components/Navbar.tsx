@@ -11,7 +11,7 @@ function Navbar() {
   
 
   return (
-    <nav className="flex flex-col md:flex-row m-2 md:m-12 shadow bg-white p-8 rounded-lg gap-4 lg:gap-8 items-center">
+    <nav className="flex  flex-col md:flex-row m-2 md:m-12 shadow bg-white p-8 rounded-lg gap-4 lg:gap-8 items-center">
         <Link href={'/'} >
         <Image className="rounded-full object-cover lg:w-32 lg:h-32 w-20 h-20 " src="/me.jpg" alt="logo" width={100} height={100} />
         </Link>
