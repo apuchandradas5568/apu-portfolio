@@ -9,7 +9,7 @@ export default function Home() {
   
 
   return (
-    <main>
+    <main >
       <div className="bio-section">
         <Card
           cardTitle="👨‍💻 Mern Stack  Developer"
